@@ -47,6 +47,7 @@ export default function AppNavbar() {
 
   const isAuthenticated = status === "authenticated" && Boolean(session);
   const isDashboardRoute = pathname.startsWith("/dashboard");
+  const isPublicProfileRoute = pathname.startsWith("/u/");
   const identityLabel =
     session?.githubLogin ?? session?.user?.name ?? session?.user?.email ?? "user";
 
